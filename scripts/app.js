@@ -22,6 +22,8 @@ var alienIcon = {
   y: 500,
   xMin: -320,
   yMin: 300,
+  xMax: 400,
+  yMax: 900;
   // speedMultiplier: 10,
   // element: document.getElementById("character")
 };
@@ -35,14 +37,18 @@ function movePlane() {
        }
        if (direction == 38) {
            $("#alien").animate({top: "-=5"}, 0);
-           alienIcon.y -=5;  //= alienIcon.x -5;
+           alienIcon.y -=5;
            console.log("y is  = " + alienIcon.y);
        }
        if (direction == 39) {
            $("#alien").animate({left: "+=5"}, 0);
+           alienIcon.x +=5;
+           console.log("x is  = " + alienIcon.x);
        }
        if (direction == 40) {
            $("#alien").animate({top: "+=5"}, 0);
+           alienIcon.y +=5;
+           console.log("y is  = " + alienIcon.y);
        }
    }
 }
