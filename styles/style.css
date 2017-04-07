@@ -1,3 +1,4 @@
+
 .box {
   border: 1px solid black;
   height: 150px;
@@ -13,7 +14,7 @@ table {
   background-color: yellow;
     position: absolute;
     left: 10px;
-    width: 40%;
+    width: 450px;
     z-index: -1;  /*  lowest stack order means table in background, icons in front */
 }
 table, th, td  {
@@ -31,8 +32,15 @@ th {
   /*size: 7px;*/
   height: 7px;
   width: 7px;
+  position: absolute;
+  TOP: 235px; LEFT: 170px;
 }
-
+ #plane {
+  height: 50px;
+  position:absolute;
+  top:40%;
+  left:40%;
+}
  /*  code fron Donny
 setInterval(movePlane, 20);
 var keys = {}
