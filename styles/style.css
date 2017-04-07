@@ -14,60 +14,42 @@ table {
   background-color: yellow;
     position: absolute;
     left: 10px;
-    width: 450px;
+    max-width: 100%;
     z-index: -1;  /*  lowest stack order means table in background, icons in front */
 }
-table, th, td  {
+table, tr, td  {
   border: 1px solid black;
+  width: 800px;
 }
 td {
-  height: 10px;
-  width: 10%;
+  height: 80px;
+  width: 12x;
 }
-th {
-  /*height: 10px;*/
-  /*width: 10 px;*/
+tr {
+  /*height: 10px;
+  width: 50px;*/
 }
-.Odie {
-  /*size: 7px;*/
-  height: 7px;
-  width: 7px;
-  position: absolute;
-  TOP: 235px; LEFT: 170px;
-}
- #plane {
+
+/*.Odie {
+  height: 70px;
+  width: 70px;
+  position: relative;
+  TOP: 235px; left: 170px;
+} */
+
+ #alien {
   height: 50px;
   position:absolute;
   top:40%;
   left:40%;
 }
- /*  code fron Donny
-setInterval(movePlane, 20);
-var keys = {}
-
-$(document).keydown(function(e) {
-   keys[e.keyCode] = true;
-});
-
-$(document).keyup(function(e) {
-   delete keys[e.keyCode];
-});
-
-
-function movePlane() {
-   for (var direction in keys) {
-       if (!keys.hasOwnProperty(direction)) continue;
-       if (direction == 37) {
-           $("#").animate({left: "-=5"}, 0);
-       }
-       if (direction == 38) {
-           $("#").animate({top: "-=5"}, 0);
-       }
-       if (direction == 39) {
-           $("#").animate({left: "+=7"}, 0);
-       }
-       if (direction == 40) {
-           $("#").animate({top: "+=5"}, 0);
-       }
-   }
-}; */
+.rectangle
+{
+   width: 1000px;
+   height: 400px;
+   display: block;
+   position: relative;
+   border: 1px solid black;
+   margin: 20px 0;
+   z-index: -1;  /*  lowest stack order means table in background, icons in front */
+}
