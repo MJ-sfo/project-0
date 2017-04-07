@@ -43,13 +43,3 @@ tr {
   top:40%;
   left:40%;
 }
-.rectangle
-{
-   width: 1000px;
-   height: 400px;
-   display: block;
-   position: relative;
-   border: 1px solid black;
-   margin: 20px 0;
-   z-index: -1;  /*  lowest stack order means table in background, icons in front */
-}
