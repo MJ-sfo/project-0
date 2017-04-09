@@ -14,7 +14,7 @@ $(document).keydown(function(e) {
 });
 $(document).keyup(function(e) {
    delete keys[e.keyCode];
-});
+});  // $(document).keyup
 function movePlane() {
    for (var direction in keys) {
        if (!keys.hasOwnProperty(direction)) continue;
@@ -31,4 +31,14 @@ function movePlane() {
            $("#alien").animate({top: "+=5"}, 0);
        }
    }
-}
+}  // function movePlane
+
+$(window).keydown(function() {
+        var alien = $('#alien').offset();
+        console.log('almost working')
+        if (alien.left >= 900 ) {
+            // TODO have the alert one show once
+            console.log('you made it'); // $('body').replacewith
+
+        }
+    }) //    $(window).keydown
