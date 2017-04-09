@@ -8,7 +8,8 @@ $( document ).ready(function() {
 // jsboard.board({ attach: 'game', size: 12x12, style: "checkerboard" });
 // jsboard.piece({ text: pieceName [,cssProperties] });
 setInterval(movePlane, 20);
-var keys = {}
+var keys = {};
+var borderR = false;
 $(document).keydown(function(e) {
    keys[e.keyCode] = true;
 });
@@ -24,7 +25,7 @@ function movePlane() {
        if (direction == 38) {
            $("#alien").animate({top: "-=5"}, 0);
        }
-       if (direction == 39) {
+       if (direction == 39 && !borderR) {
            $("#alien").animate({left: "+=5"}, 0);
        }
        if (direction == 40) {
@@ -35,10 +36,15 @@ function movePlane() {
 
 $(window).keydown(function() {
         var alien = $('#alien').offset();
-        console.log('almost working')
         if (alien.left >= 900 ) {
-            // TODO have the alert one show once
-            console.log('you made it'); // $('body').replacewith
+        console.log('hit right border')
+          console.log(borderR);
+          borderR = true;
+          console.log(borderR);
+          // TODO have the alert one show once
+          console.log('you made it'); // $('body').replacewith
+        }
+        else {
 
         }
     }) //    $(window).keydown
