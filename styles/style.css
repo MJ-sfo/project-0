@@ -40,6 +40,8 @@ tr {
  #alien {
   height: 50px;
   position:absolute;
-  top:40%;
-  left:40%;
+  /*top:40%;
+  left:40%;*/
+  top:200px;
+  left:200px
 }
