@@ -28,21 +28,24 @@ function movePlane() {
              $("#alien").animate({left: "-=5"}, 0);
               // borderR = false;
               console.log(alien.left);
+              borderR = false;
          }
          if (direction == 38 && !borderT) {
              $("#alien").animate({top: "-=5"}, 0);
               console.log(alien.top);
+              borderB = false;
          }
          if (direction == 39 && !borderR) {
              $("#alien").animate({left: "+=5"}, 0);
             //  console.log($("#alien").animate({left: "+=5"}, 0));
             //  console.log(strL.x);
               console.log(alien.left);
-                borderL = false;
+              borderL = false;
          }
          if (direction == 40 && !borderB) {
              $("#alien").animate({top: "+=5"}, 0);
               console.log(alien.top);
+              borderT = false;
          }
    }   // for (var direction in keys
 }  //     function movePlane
