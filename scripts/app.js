@@ -1,17 +1,11 @@
 $( document ).ready(function() {
   var reset  = false;
-  var alien = $('#alien').offset();
-  // var imgs = getElementsByTagName('#alien');
+  // var alienOrg = $('#alien').offset();
 
   $(".button1").click( function() {
-    // choose = " ";
-    // $( "h3.center-block" ).text(" ");
-    // console.log("imgs is: "+ imgs );
     reset = true;
-    // imgs.style.top=200px;
-    // $('#alien').style.top=200px;
     document.getElementById('alien').style.left= 'auto';
-    // document.getElementById("alien").reset();
+    document.getElementById('alien').style.top= 'auto';
   } );   //   $(".button1").click
 
 
@@ -21,24 +15,22 @@ $( document ).ready(function() {
   var borderL = false;
   var borderT = false;
   var borderB = false;
+  if (reset == true) {
+    console.log("alien position reset " );
+   reset = false;
+ }   //  if (reset == true)
 
   $(document).keydown(function(e) {
      keys[e.keyCode] = true;
-     if (reset == true) {
-      //  console.log("reset at keydown");
-       console.log("alien.left is " + alien.left);
-      // alien.left: 200px;
-      // alien.top =200px;
-      reset = false;
-     }
   });
 
   $(document).keyup(function(e) {
      delete keys[e.keyCode];
   });  // $(document).keyup
+
   function movePlane() {
     // var strL = $("#alien").animate()[0];
-    // var alien = $('#alien').offset();    // moved to top of doc
+    var alien = $('#alien').offset();    // moved to top of doc
      for (var direction in keys) {
          if (!keys.hasOwnProperty(direction)) continue;
            if (direction == 37 && !borderL) {
@@ -68,20 +60,20 @@ $( document ).ready(function() {
   }  //     function movePlane
 
   $(window).keydown(function() {
-    var alien = $('#alien').offset();
-    if (alien.left >= 780 ) {
+    var alienDown = $('#alien').offset();
+    if (alienDown.left >= 780 ) {
     console.log('hit right border');
       borderR = true;
     }
-    else if (alien.left <= 0 ) {
+    else if (alienDown.left <= 0 ) {
     console.log('hit left border');
       borderL = true;
     }
-    else if (alien.top <= 0 ) {
+    else if (alienDown.top <= 0 ) {
     console.log('hit top border');
       borderT = true;
     }
-    else if (alien.top >= 300 ) {
+    else if (alienDown.top >= 300 ) {
     console.log('hit bottom border');
       borderB = true;
     }
