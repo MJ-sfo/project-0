@@ -10,6 +10,9 @@ $( document ).ready(function() {
 setInterval(movePlane, 20);
 var keys = {};
 var borderR = false;
+var borderL = false;
+var borderT = false;
+var borderB = false;
 $(document).keydown(function(e) {
    keys[e.keyCode] = true;
 });
@@ -19,16 +22,20 @@ $(document).keyup(function(e) {
 function movePlane() {
    for (var direction in keys) {
        if (!keys.hasOwnProperty(direction)) continue;
-       if (direction == 37) {
+       if (direction == 37 && !borderL) {
            $("#alien").animate({left: "-=5"}, 0);
        }
-       if (direction == 38) {
+       if (direction == 38 && !borderB) {
            $("#alien").animate({top: "-=5"}, 0);
        }
        if (direction == 39 && !borderR) {
            $("#alien").animate({left: "+=5"}, 0);
+           var strL = $("#alien").animate({left: "+=5"}, 0)[0];
+           console.log(strL.x);
+          //  strL.x = 100;
+          //  console.log(strL.x);
        }
-       if (direction == 40) {
+       if (direction == 40 && !borderT) {
            $("#alien").animate({top: "+=5"}, 0);
        }
    }
@@ -38,9 +45,7 @@ $(window).keydown(function() {
         var alien = $('#alien').offset();
         if (alien.left >= 900 ) {
         console.log('hit right border')
-          console.log(borderR);
           borderR = true;
-          console.log(borderR);
           // TODO have the alert one show once
           console.log('you made it'); // $('body').replacewith
         }
