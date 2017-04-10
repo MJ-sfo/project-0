@@ -44,4 +44,15 @@ tr {
   left:40%;*/
   top:200px;
   left:200px
+  z-index: 2;  /*  lowest stack order means table in background, icons in front */
+}
+#moon {
+ /*height: 50px;*/
+ left: 10px;
+ position:absolute;
+ top:0px;
+ /*left: 0px;*/
+ width: 780px;
+ height: 300px;
+ z-index: -1;  /*  lowest stack order means table in background, icons in front */
 }
