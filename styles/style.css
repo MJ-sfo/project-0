@@ -47,7 +47,7 @@ td {
   height: 80px;
   position: absolute;
  z-index: 0;
- top:200px;
+ top:100px;
  left:600px
 }
 #alien {
@@ -56,6 +56,14 @@ td {
   /*top:40%;
   left:40%;*/
   top:200px;
-  left:200px
+  left:200px;
   z-index: 2;  /*  lowest stack order means table in background, icons in front */
+}
+#Odie {
+  height: 60px;
+  position: absolute;
+ z-index: 0;
+ top:150px;
+ left:100px;
+ z-index: 3;
 }
