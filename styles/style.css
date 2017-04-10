@@ -67,3 +67,23 @@ td {
  left:100px;
  z-index: 3;
 }
+
+.button1 {
+  width: 300px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 6px 6px 5px; #999;
+  -webkit-box-shadow: 6px 6px 5px #999;
+  -moz-box-shadow: 6px 6px 5px #999;
+  font-weight: bold;
+  background: #ffff00;
+  color: #000;
+  border-radius: 10px;
+  border: 1px solid #999;
+  font-size: 150%;
+}
+.button1 {
+  position: absolute;
+  margin-top:  50px;
+  left: 50px;
+}
